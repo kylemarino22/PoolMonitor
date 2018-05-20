@@ -28,7 +28,7 @@ var mailOptions = {
   to: 'kyle.marino22@gmail.com',
   subject: 'Pool Shutoff',
   text: 'Hello There!\nThe Pool has been shutoff on ' +
-   date.getMonth()+1 + '/' + date.getDate() + '/' + (date.getYear()-100) + ' at ' +
+   (date.getMonth()+1) + '/' + date.getDate() + '/' + (date.getYear()-100) + ' at ' +
    date.getHours() + ':' + date.getMinutes() + '.'
 };
 
