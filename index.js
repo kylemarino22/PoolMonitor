@@ -95,6 +95,9 @@ app.get(/data/, (request, res) => {
 		    	console.log('Email sent: ' + info.response);
 		  	}
 		});
+
+    res.send("99:99");
+    return;
 	}
 	else{
 		console.log("no");
