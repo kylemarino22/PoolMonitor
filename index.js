@@ -88,7 +88,17 @@ app.get(/data/, (request, res) => {
 		console.log("no");
 	}
  
-    res.send('helo')
+  var hour = date.getHours().toString();
+  if(hour.length == 1){
+    hour = "0" + hour;
+  }
+
+  var min = date.getMinutes().toString();
+  if(min.length == 1){
+    min = "0" + min;
+  }
+
+  res.send(hour+':'+min);
   
 
 })
@@ -102,7 +112,7 @@ app.get(/test/, (request, res) => {
 
 })
 
-app.listen(process.env.PORT || 5000, '0.0.0.0', function() {
+app.listen(process.env.PORT || 3000, '0.0.0.0', function() {
   console.log('Listening to port:  ' + 3000);
   console.log(date.getMonth()+1 + " " + date.getDate());
 
