@@ -93,12 +93,7 @@ app.get(/data/, (request, res) => {
 
 })
 
-app.listen(3000, '0.0.0.0', function() {
-  console.log('Listening to port:  ' + 3000);
-  console.log(date.getHours() + " " + date.getMinutes());
 
-  console.log(timeHash(date.getHours(), date.getMinutes()));
-});
 
 
 function timeHash(hours, minutes){
