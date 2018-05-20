@@ -74,7 +74,18 @@ app.get(/data/, (request, res) => {
 
 	var reqHash = request.originalUrl.substring(6);
 	console.log(reqHash);
-	if(timeHash(date.getHours(), date.getMinutes()) == reqHash){
+
+
+  var valid = false;
+
+  if(date.getSeconds() < 10){
+    if(timeHash(date.getHours(), date.getMinutes() - 1) == reqHash){
+      valid = true;
+    }
+  }
+
+
+	if(timeHash(date.getHours(), date.getMinutes()) == reqHash || valid){
 		console.log("validResponse");
 
 		transporter.sendMail(mailOptions, function(error, info){
@@ -95,6 +106,10 @@ app.get(/data/, (request, res) => {
   }
 
   var min = date.getMinutes().toString();
+
+  if(date.getSeconds() > 50){
+    var min = (date.getMinutes()+1).toString();
+  }
   if(min.length == 1){
     min = "0" + min;
   }
