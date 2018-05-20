@@ -106,7 +106,7 @@ app.listen(process.env.PORT || 5000, '0.0.0.0', function() {
   console.log('Listening to port:  ' + 3000);
   console.log(date.getHours() + " " + date.getMinutes());
 
-  console.log(timeHash(date.getHours(), date.getMinutes()));
+  console.log(timeHash(date.getMonth(), date.getDay()));
 });
 
 
