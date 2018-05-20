@@ -11,11 +11,11 @@
     "test": "node test.js"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
     "express-handlebars": "^3.0.0",
-    "nodemailer": "^4.6.4",
-    "body-parser": "^1.18.3"
+    "nodemailer": "^4.6.4"
   },
   "devDependencies": {
     "request": "^2.81.0",
