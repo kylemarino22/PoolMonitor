@@ -68,6 +68,7 @@ app.get('/', (request, response) => {
 })
 
 app.get(/data/, (request, res) => {
+  date = new Date();
 
 	console.log(request.originalUrl);
 
