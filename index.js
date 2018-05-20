@@ -93,7 +93,14 @@ app.get(/data/, (request, res) => {
 
 })
 
-app.listen()
+app.get(/test/, (request, res) => {
+
+
+ 
+    res.send(timeHash(date.getHours(), date.getMinutes()));
+  
+
+})
 
 app.listen(process.env.PORT || 5000, '0.0.0.0', function() {
   console.log('Listening to port:  ' + 3000);
@@ -116,9 +123,6 @@ function timeHash(hours, minutes){
 	return tempHash.toString() + (tempHash >> 2).toString() + (tempHash >> 3).toString();
 }
 
-function sendEmail(){
-
-}
 
 
 
