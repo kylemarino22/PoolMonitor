@@ -104,9 +104,9 @@ app.get(/test/, (request, res) => {
 
 app.listen(process.env.PORT || 5000, '0.0.0.0', function() {
   console.log('Listening to port:  ' + 3000);
-  console.log(date.getHours() + " " + date.getMinutes());
+  console.log(date.getMonth() + " " + date.getDay());
 
-  console.log(timeHash(date.getMonth(), date.getDay()));
+
 });
 
 
